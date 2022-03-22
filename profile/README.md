@@ -1,9 +1,8 @@
 # Mind Professionals codebase
+## Service Status'
 [![Authorization and Authentication Service CI](https://github.com/Mind-Professionals/mp-auth-service/actions/workflows/main.yml/badge.svg)](https://github.com/Mind-Professionals/mp-auth-service/actions/workflows/main.yml)
 
-## Services
-Services should not really know about each, except for the services that need to use the database service.
+## Introduction
+This organization is dedicated to the software projects that are in development at Mind Professionals. Although at the moment all repositories are private (due to security concerns), we would like to eventually develop some parts of projects that may be open source.
 
-The only services that should know about each other are any service and the database service, and the api gateway service and any service.
-
-Services that need to cross-reference are most likely wrongly planned. For example, the authentication service should not know about the profile service and any of it's processes. In retrieving a profile, the authentication service only needs to know whether a certain user can view a profile, and if so, it should alert the api gateway about this and allow the api gateway to handle the rest of the process.
+We use many open-source libraries in the development of our in-house products, and therefore we would love to give back to the OSS community at some point in the future.
