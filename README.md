@@ -1,5 +1,7 @@
 # Mind Professionals codebase
+[![Authorization and Authentication Service CI](https://github.com/Mind-Professionals/mp-auth-service/actions/workflows/main.yml/badge.svg)](https://github.com/Mind-Professionals/mp-auth-service/actions/workflows/main.yml)
 
+## Services
 Services should not really know about each, except for the services that need to use the database service.
 
 The only services that should know about each other are any service and the database service, and the api gateway service and any service.
