@@ -1,12 +1,9 @@
-## Hi there 👋
+# Mind Professionals codebase
+[![Authorization and Authentication Service CI](https://github.com/Mind-Professionals/mp-auth-service/actions/workflows/main.yml/badge.svg)](https://github.com/Mind-Professionals/mp-auth-service/actions/workflows/main.yml)
 
-<!--
+## Services
+Services should not really know about each, except for the services that need to use the database service.
 
-**Here are some ideas to get you started:**
+The only services that should know about each other are any service and the database service, and the api gateway service and any service.
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+Services that need to cross-reference are most likely wrongly planned. For example, the authentication service should not know about the profile service and any of it's processes. In retrieving a profile, the authentication service only needs to know whether a certain user can view a profile, and if so, it should alert the api gateway about this and allow the api gateway to handle the rest of the process.
